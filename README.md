@@ -93,7 +93,7 @@ First we will join our director and writer DataFrames.
 
 Then we will filter our DataFrame to only rows where the writer and director are the same and return a list of mean ROI by director in descending order. We will limit our results to the top 5 individuals to give the client a clearer, less overwhelming choice.
 
-![Image: Director/Writers with the Top 5 Average ROI ](pictures/goal_2/dw_fil_head.png "Director/Writers with the Top 5 Average ROI")
+![Image: Director/Writers with the Top 5 Average ROI ](pictures/goal_2/dw_fil_head_1.png "Director/Writers with the Top 5 Average ROI")
 
 This list can then be turned into a bar graph, showing the director/writers that yield the highest return on investment for mid-tier budgeted films. 
 
