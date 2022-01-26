@@ -99,7 +99,8 @@ This list can then be turned into a bar graph, showing the director/writers that
 
 ![Image: Director/Writers with the Top 5 Average ROI Bar Graph ](pictures/goal_2/top_5_dir_wri.png "Director/Writers with the Top 5 Average ROI")
 
-### **From this data, we would recomend that our client hires the  writer/director with the highest average return on investment, David Gordon Green.**
+### **From this data, we would recomend that our client hires the  writer/director with the highest average return on investment, David Gordon Green. The primary genres he works in are horror and thrillers.**
+
 
 
 
