@@ -106,6 +106,21 @@ This list can then be turned into a bar graph, showing the director/writers that
 
 # Goal 3
 
+## Finding the best season to release a movie with the 3 genres
+After combining the tables above the first step is to drop rows with none genres,
+ideally dropping rows isn't the best soluntion but we found that there is not replacement for it like there would be for numeric rows.
+
+Now that the genre column is clean, we need to establish a certain time frame to calculate which months from which years that we want and we chose 2012 to 2010. Which is dropped from my very own data set not to disturb anyone elses.
+
+![Screenshot of dataset](pictures/ilenepics/datasettable.png)
+Since I only need months I decided to add a new column for it as you see above from the release date column but only grabbing the abbreviated from the date format. 
+After  having all that together it's time to calculate the ROI using the column in the data table we added for our convenience. 
+
+Now to get the results that we want we use the two columns and find the average with mean for all the months and create a new variable with all the months of the year so that it could graph correctly.
+
+![Screenshot of dataset](pictures/ilenepics/graphdata.png)
+
+After graphing the data we found the best time to release a movie with our chosen genres is overwhelming july which the best season being summer. 
 
 
 
