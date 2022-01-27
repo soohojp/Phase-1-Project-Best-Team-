@@ -4,7 +4,7 @@
 
 After identifying the data sets needed by all members of our team, we first cleaned the `tn.movie_budgets.csv.gz` by converting it to a Pandas DataFrame and stripping all punctuation from the columns related to finance. All items in these columns were then converted to . A new column was created in the DataFrame called "ROI" in which the return on investment was calculated using the following equation:
 
-#### **worldwide_gross - budget)/(worldwide_gross)**
+#### **100 * (worldwide_gross - budget)/(worldwide_gross)**
 
 Yet another column was then added named "start_year" in order to help with joining the DataFrame in later steps. Finally, all rows where worldwide gross was zero were eliminated from the data.
 
