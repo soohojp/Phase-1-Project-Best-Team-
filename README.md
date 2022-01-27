@@ -1,6 +1,21 @@
-# Phase-1-Project-Best-Team-
+# Phase 1 - Project #1 - Microsoft Studios Proposal
 
-## Master Data Filtering and Cleaning
+## Project Team: 
+ - [**Ilene Sorto**](https://github.com/ileneee)
+ - [**Soo Ho (John) Park**](https://github.com/soohojp)
+ - [**Nicholas Wertz**](https://github.com/njw27)
+
+## Navigating the Repo
+All data used in this project can be found in the file `master_dataset.ipynb`. 
+Each individual goal was coded separately by John for goal 1, Nick for goal 2, and Ilene for goal 3. These separate files were then joined into the master dataset. All images used in this README.md can be found in the `pictures/` folder seperated by who utilized them. 
+
+### [**Google Slides Presentation**](https://docs.google.com/presentation/d/1lji_D2xxVe0zyIKBb3xj-NbBtchKtJVsNWZ2Hw34yL4/edit?usp=sharing)
+
+
+# Resources
+The datasets used were two large to upload to this GitHub repo, but were sourced from [**IMDB**](https://www.imdb.com/) and [**The Numbers**](https://www.the-numbers.com/). IMDB provided the movie titles, staff, and release information. The Numbers was primarily used for financial information. 
+
+# Master Data Filtering and Cleaning
 
 After identifying the data sets needed by all members of our team, we first cleaned the `tn.movie_budgets.csv.gz` by converting it to a Pandas DataFrame and stripping all punctuation from the columns related to finance. All items in these columns were then converted to . A new column was created in the DataFrame called "ROI" in which the return on investment was calculated using the following equation:
 
@@ -118,6 +133,16 @@ This list can then be turned into a bar graph, showing the director/writers that
 #### Track if a directors ROI can be predicted through modeling (ex. If certain director is given budget X, the ROI will most likely be in Y range
 #### Create a program that you can enter one or more of several variables, and will output ideal director/writer/time of release/etc. based on input
 #### Gather/find new information reguarding the marketing budget and its relationship to total gross and ROI
+
+
+
+
+
+
+
+
+
+
 
 
 # Appendix: 
