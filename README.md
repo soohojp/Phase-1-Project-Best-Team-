@@ -9,11 +9,18 @@
 All data used in this project can be found in the file [`master_dataset.ipynb`](https://github.com/soohojp/Phase-1-Project-Best-Team-/blob/main/master_dataset.ipynb). 
 Each individual goal was coded separately by John for [Goal 1](https://github.com/soohojp/Phase-1-Project-Best-Team-/blob/main/Untitled%20copy.ipynb), Nick for [Goal 2](https://github.com/soohojp/Phase-1-Project-Best-Team-/blob/main/goal_2_nick_w.ipynb), and Ilene for [Goal 3](https://github.com/soohojp/Phase-1-Project-Best-Team-/blob/main/Data%20set%20cleaning%20-%20ilene.ipynb). These separate files were then joined into the [`master_dataset.ipynb`](https://github.com/soohojp/Phase-1-Project-Best-Team-/blob/main/master_dataset.ipynb). All images used in this README.md can be found in the [`pictures/`](https://github.com/soohojp/Phase-1-Project-Best-Team-/tree/main/pictures) folder seperated by who utilized them for which goal. 
 
+
 ### [**Google Slides Presentation**](https://docs.google.com/presentation/d/1lji_D2xxVe0zyIKBb3xj-NbBtchKtJVsNWZ2Hw34yL4/edit?usp=sharing)
 
 
 # Resources
 The datasets used were too large to upload to this GitHub repo, but were sourced from [**IMDB**](https://www.imdb.com/) and [**The Numbers**](https://www.the-numbers.com/). IMDB provided the movie titles, staff, and release information and The Numbers was primarily used for financial information. 
+
+
+# Introduction
+
+As an up-and-coming studio, Microsoft Studio may be questioning as to whether or not it should invest huge sums of money into the film industry. Our data analysis of databases on film information can assess the risk and measure the potential return of entering the field. With our keen focus on the average return on investment, we pinpoint what genres, directors/writers, and release timeframe would yield the highest returns.
+
 
 # Master Data Filtering and Cleaning
 
@@ -201,6 +208,10 @@ Now to get the results that we want we use the two columns and find the average 
 After graphing the data we found the best time to release a movie with our chosen genres is overwhelming July which the best season being summer. 
 
 
+
+# Conclusion
+
+Our data analysis based on the metric, return on investment, demonstrates that Microsoft Studio should release mystery, thriller, and horror films in July with directors who can also write scripts like the likes of David Gordon Green, Damien Chazelle, John Krasinski, Jordan Peele, and M. Night Shyamalan. Hiring those who can serve as both the director and writer can drastically reduce the production budget, therefore resulting in a higher yield. Our recommendation offers a low risk, low cost approach targetting  a less competitive, niche genre. Especially for a newly developing studio, like Microsoft Studio, this type of approach can set the groundworks for bigger ventures in the future.
 
 
 
