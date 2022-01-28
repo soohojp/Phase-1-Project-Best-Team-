@@ -5,15 +5,15 @@
  - [**Soo Ho (John) Park**](https://github.com/soohojp)
  - [**Nicholas Wertz**](https://github.com/njw27)
 
-## Navigating the Repo
+## Navigating the Repository
 All data used in this project can be found in the file `master_dataset.ipynb`. 
-Each individual goal was coded separately by John for goal 1, Nick for goal 2, and Ilene for goal 3. These separate files were then joined into the master dataset. All images used in this README.md can be found in the `pictures/` folder seperated by who utilized them. 
+Each individual goal was coded separately by John for [Goal 1](https://github.com/soohojp/Phase-1-Project-Best-Team-/blob/main/Untitled%20copy.ipynb), Nick for [Goal 2](https://github.com/soohojp/Phase-1-Project-Best-Team-/blob/main/goal_2_nick_w.ipynb), and Ilene for [Goal 3](https://github.com/soohojp/Phase-1-Project-Best-Team-/blob/main/Data%20set%20cleaning%20-%20ilene.ipynb). These separate files were then joined into the [`master_dataset.ipynb`](https://github.com/soohojp/Phase-1-Project-Best-Team-/blob/main/master_dataset.ipynb). All images used in this README.md can be found in the [`pictures/`](https://github.com/soohojp/Phase-1-Project-Best-Team-/tree/main/pictures) folder seperated by who utilized them for which goal. 
 
 ### [**Google Slides Presentation**](https://docs.google.com/presentation/d/1lji_D2xxVe0zyIKBb3xj-NbBtchKtJVsNWZ2Hw34yL4/edit?usp=sharing)
 
 
 # Resources
-The datasets used were two large to upload to this GitHub repo, but were sourced from [**IMDB**](https://www.imdb.com/) and [**The Numbers**](https://www.the-numbers.com/). IMDB provided the movie titles, staff, and release information. The Numbers was primarily used for financial information. 
+The datasets used were too large to upload to this GitHub repo, but were sourced from [**IMDB**](https://www.imdb.com/) and [**The Numbers**](https://www.the-numbers.com/). IMDB provided the movie titles, staff, and release information and The Numbers was primarily used for financial information. 
 
 # Master Data Filtering and Cleaning
 
@@ -100,7 +100,7 @@ On all four metrics, War, Western, Sport, and Documentary genres are likely to n
 
 
 
-# Goal 2 - Writer and Director Profitablity
+# Goal 2 - Writer and Director Profitability
 
 
 ## Return on Investment for Directors
@@ -109,17 +109,17 @@ The first step was joining our `movie_basics` table to our directors and persons
 
 ![Image of directors dataframe](pictures/goal_2/directors_df.png "Dataframe, directors")
 
-Next, we merged our diectors DataFrame to the `imdb_basics` DataFrame we created as part of our master data set. We perfomed an inner join to keep only the films with the same title that also shared  start years. We joined on two columns in order to avoid false joins where different films have the same title.
+Next, we merged our directors DataFrame to the `imdb_basics` DataFrame we created as part of our master data set. We performed an inner join to keep only the films with the same title that also shared  start years. We joined on two columns in order to avoid false joins where different films have the same title.
 
 ![Image of d_info__all dataframe](pictures/goal_2/d_info_all.png "Dataframe, d_info__all, joined from directors and imdb_info")
 
 ![Image of 25th and 75th percentile results](pictures/goal_2/budget_per.png "Percentile results")
 
-This data left a lot to be desired, as we had deceased directors, incredibly small budgeted films, and extemely high budgeted films in our data. This was cleaned, eliminating directors that had passed at the time of this data's collection. The data was also constrained to a minimum budget of 10 million dollars and a maximum of 65 million dollars, based on the budget data's 25th and 75th percentiles, respectively. Given the client, this range is ideal as 10 million dollars is an extremely conservative film budget and not much for them to spend. 65 million dollars seems to be a good maximum, as they are establishing a new studio and do should not spend all potential capital on one or two films. These constraints will find a director who is comfortable working in this budget range and returning a profit.
+This data left a lot to be desired, as we had deceased directors, incredibly small budgeted films, and extremely high budgeted films in our data. This was cleaned, eliminating directors that had passed at the time of this data's collection. The data was also constrained to a minimum budget of 10 million dollars and a maximum of 65 million dollars, based on the budget data's 25th and 75th percentiles, respectively. Given the client, this range is ideal as 10 million dollars is an extremely conservative film budget and not much for them to spend. 65 million dollars seems to be a good maximum, as they are establishing a new studio and do should not spend all potential capital on one or two films. These constraints will find a director who is comfortable working in this budget range and returning a profit.
 
 ![Image of dataframe with Films, ROI, and Directors for films with budgets between &10 and $65 million. In descending order of ROI](pictures/goal_2/dir_constrained.png "Newly Constrained List of Directors")
 
-After additional filtering, we now have a DataFrame of all films, their ROI, and their director. As every director has directed films of various budgets, the mean of all ROI was calculated for each director. The results were then listed in decending order and finally the top 20 directors on this list were placed on a bar graph.
+After additional filtering, we now have a DataFrame of all films, their ROI, and their director. As every director has directed films of various budgets, the mean of all ROI was calculated for each director. The results were then listed in descending order and finally the top 20 directors on this list were placed on a bar graph.
 
 
 ![Image of Directors and Average ROI in descending order of ROI](pictures/goal_2/dir_roi.png "Average Director ROI")
@@ -127,7 +127,7 @@ After additional filtering, we now have a DataFrame of all films, their ROI, and
 ![Bar graph showing directors with the top 20 average ROIs](pictures/goal_2/top_20_dir.png "DirectorTop 20 Average ROI Graph")
 
 
-As can be seen, our data filtering has yeilded the client with a list of  directors with the top 20 ROI. It includes notable directors such as Darren Aronofsky, James Wan, Jordan Peele and M. Night Shyamalan. This graph of the top 20 will be presented to the client as well as the full list upon request. However, this is still 20 choices, which may be overwhelming to the client. This will be further filtered after we create a list of writers with the top ROI.
+As can be seen, our data filtering has yielded the client with a list of  directors with the top 20 ROI. It includes notable directors such as Darren Aronofsky, James Wan, Jordan Peele and M. Night Shyamalan. This graph of the top 20 will be presented to the client as well as the full list upon request. However, this is still 20 choices, which may be overwhelming to the client. This will be further filtered after we create a list of writers with the top ROI.
 
 
 
@@ -143,23 +143,23 @@ Next, we merged our DataFrame that connected movies to writers to the `imdb_basi
 
 ![Image of w_info__all dataframe](pictures/goal_2/w_info_all_2.png "Dataframe, w_info__all, joined from writers and imdb_info")
 
-This was cleaned accoring to the guidelines we followed in directors. All deceased writers were eliminated from the new DataFrame and the budget was yet again constrained to the 25th and 75th percentiles (10 million dollars to 65 million dollars).
+This was cleaned according to the guidelines we followed in directors. All deceased writers were eliminated from the new DataFrame and the budget was yet again constrained to the 25th and 75th percentiles (10 million dollars to 65 million dollars).
 
 
 ![Image of dataframe with Films, ROI, and Writers for films with budgets between &10 and $65 million. In descending order of ROI](pictures/goal_2/writer_cons.png "Newly Constrained List of Writers")
 
 
-After additional filtering, we now have a DataFrame of all films, their ROI, and their writers. The mean of each writers ROIs were calculated. The results were then listed in decending order and graphed.
+After additional filtering, we now have a DataFrame of all films, their ROI, and their writers. The mean of each writers ROIs were calculated. The results were then listed in descending order and graphed.
 
 ![Dataframe of Writers and Average ROI in descending order of ROI](pictures/goal_2/full_write_list.png "Average Writer ROI")
 
 ![Bar graph showing writers with the top 20 average ROIs](pictures/goal_2/top_20_wri.png "Writer Top 20 Average ROI Graph")
 
 
-As can be seen, our data filtering has yeilded the clinet with a list of writers with the top 20 ROIs. Notable individuals on the list include: David Gordon Green, Cary Fukunaga, and John Krasinski. This graph of the top 20 will be presented to the client as well as the full list upon request. We still have many writers to choose from and we need to match them to a director. 
+As can be seen, our data filtering has descending the client with a list of writers with the top 20 ROIs. Notable individuals on the list include: David Gordon Green, Cary Fukunaga, and John Krasinski. This graph of the top 20 will be presented to the client as well as the full list upon request. We still have many writers to choose from and we need to match them to a director. 
 
 
-However, it would be much simpler to get a writer who is also a director, to save the trouble of having to mach the two roles. It also introduces potential cost savings in streamlining production, as you would only need pay the director slightly more to do the work of two people, rather than paying two seperate people full salaries.
+However, it would be much simpler to get a writer who is also a director, to save the trouble of having to mach the two roles. It also introduces potential cost savings in streamlining production, as you would only need pay the director slightly more to do the work of two people, rather than paying two separate people full salaries.
 
 ## Who can both direct and write and still deliver the highest return on investment?
 
@@ -176,7 +176,7 @@ This list can then be turned into a bar graph, showing the director/writers that
 
 ![Image: Director/Writers with the Top 5 Average ROI Bar Graph ](pictures/goal_2/top_5_dir_wri.png "Director/Writers with the Top 5 Average ROI")
 
-### **From this data, we would recomend that our client hires the  writer/director with the highest average return on investment, David Gordon Green. The primary genres he works in are horror and thrillers.**
+### **From this data, we would recommend that our client hires the  writer/director with the highest average return on investment, David Gordon Green. The primary genres he works in are horror and thrillers.**
 
 
 
@@ -185,9 +185,9 @@ This list can then be turned into a bar graph, showing the director/writers that
 
 ## Finding the best season to release a movie with the 3 genres
 After combining the tables above the first step is to drop rows with none genres,
-ideally dropping rows isn't the best soluntion but we found that there is not replacement for it like there would be for numeric rows.
+ideally dropping rows isn't the best solution but we found that there is not replacement for it like there would be for numeric rows.
 
-Now that the genre column is clean, we need to establish a certain time frame to calculate which months from which years that we want and we chose 2012 to 2010. Which is dropped from my very own data set not to disturb anyone elses.
+Now that the genre column is clean, we need to establish a certain time frame to calculate which months from which years that we want and we chose 2012 to 2010. Which is dropped from my very own data set not to disturb anyone else's.
 
 ![Screenshot of dataset](pictures/ilenepics/datasettable.png "")
 
@@ -198,7 +198,7 @@ Now to get the results that we want we use the two columns and find the average 
 
 ![Screenshot of dataset](pictures/ilenepics/graphdata.png "")
 
-After graphing the data we found the best time to release a movie with our chosen genres is overwhelming july which the best season being summer. 
+After graphing the data we found the best time to release a movie with our chosen genres is overwhelming July which the best season being summer. 
 
 
 
@@ -210,7 +210,7 @@ After graphing the data we found the best time to release a movie with our chose
 #### Figure out if runtime affects profitability 
 #### Track if a directors ROI can be predicted through modeling (ex. If certain director is given budget X, the ROI will most likely be in Y range
 #### Create a program that you can enter one or more of several variables, and will output ideal director/writer/time of release/etc. based on input
-#### Gather/find new information reguarding the marketing budget and its relationship to total gross and ROI
+#### Gather/find new information regarding the marketing budget and its relationship to total gross and ROI
 
 
 # Appendix: 
@@ -218,62 +218,15 @@ After graphing the data we found the best time to release a movie with our chose
 ## **Is critical reception correlated to ROI? Worldwide Gross? Domestic Gross?**
 
 
-A new dataframe was created from the `movie_ratings` and `movie_basics` SQL tables and joind to     `imdb_basics`. The results were then filtered to only films with 50,000 or more votes to prevent skewed data from films with a low number of votes. The same budget constraints were put on this data as in Goal #2 for consistency.
+A new dataframe was created from the `movie_ratings` and `movie_basics` SQL tables and joined to `imdb_basics`. The results were then filtered to only films with 50,000 or more votes to prevent skewed data from films with a low number of votes. The same budget constraints were put on this data as in Goal #2 for consistency.
 ![DataFrame showing all movies, budget, domestic gross,  worldwide gross, ROI, and average critical reception](pictures/goal_2/crit_list.png "Dataframe of film, financials, and rating")
 
-The Pearson correlations were then found for the rating vs ROI, worldwide gross, anmd domestic gross.
+The Pearson correlations were then found for the rating vs ROI, worldwide gross, and domestic gross.
 
 ![A list of the Pearson Correlations](pictures/goal_2/corr_res.png "Pearson correlations")
 
-#### So there is a positve correlation between critcal rating and ROI/Worldwide gross/domestic gross but its not a high/significant result. We will graph the relationship with the highest correlation as a scatter plot to look at this information visually.
+#### So there is a positive correlation between critical rating and ROI/Worldwide gross/domestic gross but its not a high/significant result. We will graph the relationship with the highest correlation as a scatter plot to look at this information visually.
 
 ![A Scatter Plot of ROI vs Critical reception](pictures/goal_2/scatter_crit_1.png "Scatter Plot of ROI vs Critical Reception")
-
-
-
-
-
-
-
-# Future Improvements 
-#### Look into the ROI for actors/actresses to help narrow down casting
-#### Narrow down writers by region/language to get even more relevant results
-#### Figure out if runtime affects profitability 
-#### Track if a directors ROI can be predicted through modeling (ex. If certain director is given budget X, the ROI will most likely be in Y range
-#### Create a program that you can enter one or more of several variables, and will output ideal director/writer/time of release/etc. based on input
-#### Gather/find new information reguarding the marketing budget and its relationship to total gross and ROI
-
-
-
-
-
-
-
-
-
-
-
-
-# Appendix: 
-
-## **Is critical reception correlated to ROI? Worldwide Gross? Domestic Gross?**
-
-
-A new dataframe was created from the `movie_ratings` and `movie_basics` SQL tables and joind to     `imdb_basics`. The results were then filtered to only films with 50,000 or more votes to prevent skewed data from films with a low number of votes. The same budget constraints were put on this data as in Goal #2 for consistency.
-![DataFrame showing all movies, budget, domestic gross,  worldwide gross, ROI, and average critical reception](pictures/goal_2/crit_list.png "Dataframe of film, financials, and rating")
-
-The Pearson correlations were then found for the rating vs ROI, worldwide gross, anmd domestic gross.
-
-![A list of the Pearson Correlations](pictures/goal_2/corr_res.png "Pearson correlations")
-
-#### So there is a positve correlation between critcal rating and ROI/Worldwide gross/domestic gross but its not a high/significant result. We will graph the relationship with the highest correlation as a scatter plot to look at this information visually.
-
-![A Scatter Plot of ROI vs Critical reception](pictures/goal_2/scatter_crit_1.png "Scatter Plot of ROI vs Critical Reception")
-
-
-
-
-
-
 
 
