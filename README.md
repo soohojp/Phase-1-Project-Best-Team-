@@ -31,9 +31,71 @@ Next a connection was established to the unzipped `im.db` file and a curser was 
 
 
 # Goal 1 - 
+## Return on Investment by Genre
+
+The first step was to drop rows with undefined genres from the dataframe `imdb_basics` before we categorized each film by genre.
+
+![Image of genres dataframe](pictures/goal_1/genres_df.png "Dataframe, genres")
+
+As shown above, many films are categorized under more than one genres. For example, `'Foodfight!'` is in three genres, which are `'Action, Animation, Comedy'`.
+
+One major consideration we had to make was whether we should retain the combination of genres as a distinct category or include it into each of the genres. In other words, should we make a new genre called `'Action, Animation, Comedy'` or place `'Foodfight!'` into the `'Action'` genre, `'Animation'` genre, and `'Comedy'` genre?
+
+The former would offer more nuanced data as to which specific combination of genres would be the most profitable, yet the data frame would then account for too many genres, making it confusing and inaccessible to the audience.
+
+Thus, we've decided to place films into each of genres separately.
 
 
+The second step was to make a list of unique genres to see how many distinct genres there are.
 
+![Image of genres list](pictures/goal_1/genres_list.png "list, genres")
+
+Next, `imdb_basics` dataframe was translated into variables, which categorizes films by unique genres. Since values under the `'genres'` column in `imdb_basics` are strings, inputting the genre name into the `.str.contains()` method will filter data by genre. Then, by using `.ROI.mean()` on each of the variables, we created a list called `genre_roi_mean` that contains the mean of the ROI by genre.
+
+After data wranggling, we now have the list of unique genres and the average ROI for those genres respectively. Instead of placing the data onto a bar graph directly, we created a new dataframe `genreroidf` to order it based on highest to lowest ROI mean values.
+
+![Image of bar graph on avg roi by genre](pictures/goal_1/avgroibygenre.png "bar graph, avg roi by genre")
+
+As shown above, this bar graph shows the mean of return on investment for each of the genres. `'Horror'`, `'Mystery'`, and `'Thriller'` appear to yield the highest average return on investment, while `'War'`, `'Western'`, and `'Sports'` yield the lowest. This data visualization can help identify which genres can have a lower risk from the point of view as an investor.
+
+## Size of Market by Genre
+
+Finding the mean return on investment is important in selecting what genres to film, especially as an up-and-coming studio. However, another significant factor to consider is the size of the market - how much total profit was made in each genre. This can help determine where the money lies.
+
+To find the sum of profits of all films in each genre, we used the method `.sum()` on the variables that categorized the data by genre.
+
+The list of unique genres from above and the sum of profits of all films were placed into a new dataframe called `'genretotalprofitdf'`, which organized genres from highest to lowest total profit. Using this dataframe, we formulated a bar graph.
+
+![Image of bar graph on total profit by genre](pictures/goal_1/totalprofitbygenre.png "bar graph, total profit by genre")
+
+As this bar graph indicates, `'Action'`, `'Adventure'`, and `'Comedy'` are the biggest markets in terms of profit, while `'War'`, `'Western'`, `'Sport'`, and `'Documentary'` yield the lowest profits. This visualization can provide a general sense of which genres attract the most profit, therefore the size of the market.
+
+
+## Saturation of the Market
+Yes, the total profit of all films in each genre helps us understand the size of the market, but to gain a deeper understanding about the market, we must also consider its saturation. So, how many films are exactly in each of the genres? 
+
+The list of unique genres from above and number of films in each genre were placed into a new dataframe called `genrenumdf`, which organizes genres by their number of films in descending order. This new dataframe was used to formulate a bar graph.
+
+![Image of bar graph on num of films by genre](pictures/goal_1/numoffilmsbygenre.png "bar graph, num of films by genre")
+
+As this bar graph indicates, `'Drama'`, `'Comedy'`, and `'Action'` have a higher number of films, while `'War'`, `'Western'`, and `'Musical'` have a lower number of films. This visualization not only shows the size of the market based on genre, but also suggests how much competition is in each market.
+
+
+## Average Profit of a Film in Each Genre
+
+Combining the information on total profit and the number of films in each genre, we can find the average profit of a film in each genre. This allows us to consider which genres could yield the highest profit.
+
+The list of unique genres from above and the mean profit of films in each genre were placed into a new dataframe called `genreaveprofitdf`, which organizes genres from the highest average profit to the lowest. This new dataframe was then used to formulate a bar graph.
+
+![Image of bar graph on avg profit by genre](pictures/goal_1/avgprofitbygenre.png "bar graph, avg profit by genre")
+
+As this bar graph indicates, films that are Animation, Musical, Sci-Fi, and Adventure have a high average profit, while films that are War, Sport, and Documentary have a low average profit.
+
+One can gain a deeper understanding about the relationship between genre and profitability by synthesizing the graphs on average ROIs by genre, total profit by genre, number of films in genre, and average profit of film by genre.
+
+The graph on average ROIs by genre indicate that Horror, Mystery, and Thriller have a higher average ROI, suggesting a lower risk in investment than other genres. However, the markets for the aforementioned genres are actually small compared to more saturated genres with higher attraction of money like Action and Adventure. This means that the pure profit from genres like Horror, Mystery, and Thriller may not be that high, but with lower competition in the genre and a higher average ROI, there may be lower risk and an opportunity to enter a niche market.
+
+On all four metrics, War, Western, Sport, and Documentary genres are likely to not only yield low average profits, but also have low returns on investment. Microsoft Studios should be cautious to involve themselves in these types of genres.
 
 
 
