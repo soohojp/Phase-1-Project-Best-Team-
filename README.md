@@ -6,7 +6,7 @@
  - [**Nicholas Wertz**](https://github.com/njw27)
 
 ## Navigating the Repository
-All data used in this project can be found in the file `master_dataset.ipynb`. 
+All data used in this project can be found in the file [`master_dataset.ipynb`](https://github.com/soohojp/Phase-1-Project-Best-Team-/blob/main/master_dataset.ipynb). 
 Each individual goal was coded separately by John for [Goal 1](https://github.com/soohojp/Phase-1-Project-Best-Team-/blob/main/Untitled%20copy.ipynb), Nick for [Goal 2](https://github.com/soohojp/Phase-1-Project-Best-Team-/blob/main/goal_2_nick_w.ipynb), and Ilene for [Goal 3](https://github.com/soohojp/Phase-1-Project-Best-Team-/blob/main/Data%20set%20cleaning%20-%20ilene.ipynb). These separate files were then joined into the [`master_dataset.ipynb`](https://github.com/soohojp/Phase-1-Project-Best-Team-/blob/main/master_dataset.ipynb). All images used in this README.md can be found in the [`pictures/`](https://github.com/soohojp/Phase-1-Project-Best-Team-/tree/main/pictures) folder seperated by who utilized them for which goal. 
 
 ### [**Google Slides Presentation**](https://docs.google.com/presentation/d/1lji_D2xxVe0zyIKBb3xj-NbBtchKtJVsNWZ2Hw34yL4/edit?usp=sharing)
